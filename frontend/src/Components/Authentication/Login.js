@@ -57,6 +57,17 @@ const Login = () => {
 				onClick={submitHandler}>
 				Login
 			</Button>
+			<Button
+				variant={"solid"}
+				colorScheme='red'
+				width='100%'
+				style={{ marginTop: 15 }}
+				onClick={() => {
+					setEmail("guest@example.com");
+					setPassword("guest@example.com");
+				}}>
+				Get Guest User Credentials
+			</Button>
 		</VStack>
 	);
 };
