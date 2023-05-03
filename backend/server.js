@@ -7,14 +7,15 @@ const app = express();
 
 //middlewares
 dotenv.config();
+app.use(express.json());
 
 //DB Connection
 connectDB();
 
-const PORT = process.env.PORT || 5000;
-
 // routes call
 app.use("/api/user", userRoutes);
+
+const PORT = process.env.PORT || 5000;
 
 app.listen(
 	PORT,
